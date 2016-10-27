@@ -1,4 +1,5 @@
 #!/bin/bash
+function criar_dir_p {
 if [ -z $1 ]; then
 	echo "Informe o diretorio"
 	
@@ -11,6 +12,8 @@ do
    var=$var/$i
 done
 var=${var:1}
-echo $var
 mkdir -p "$var"
 fi
+}
+
+criar_dir_p ${@}
